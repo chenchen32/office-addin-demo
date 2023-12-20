@@ -9,7 +9,7 @@
   "config": {
     "app_to_debug": "powerpoint",
     "app_type_to_debug": "desktop",
-    "dev_server_port": 3000
+    "dev_server_port": 10200
   },
   "scripts": {
     "build": "webpack --mode production",
@@ -43,6 +43,7 @@
     "@types/react-dom": "^18.2.7",
     "@types/webpack": "^4.4.34",
     "acorn": "^8.5.0",
+    "ajv": "^8.12.0",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "eslint-plugin-office-addins": "^2.1.5",
