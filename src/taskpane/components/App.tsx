@@ -1,44 +1,44 @@
-import * as React from "react";
-import Header from "./Header";
-import HeroList, { HeroListItem } from "./HeroList";
-import TextInsertion from "./TextInsertion";
-import { makeStyles } from "@fluentui/react-components";
-import { Ribbon24Regular, LockOpen24Regular, DesignIdeas24Regular } from "@fluentui/react-icons";
+import React from "react";
+import { Button } from "antd";
+import * as officeUtils from "../office-document";
 
-interface AppProps {
-  title: string;
-}
+const App = () => {
+  const insertText = () => {
+    officeUtils.insertText("一些文字。。。");
+  };
 
-const useStyles = makeStyles({
-  root: {
-    minHeight: "100vh",
-  },
-});
+  const insertImage = () => {
+    officeUtils.insertImage("https://cdn.jsdelivr.net/gh/chenchen32/office-addin-demo@main/public/assets/squirtle.jpg");
+  };
 
-const App = (props: AppProps) => {
-  const styles = useStyles();
-  // The list items are static and won't change at runtime,
-  // so this should be an ordinary const, not a part of state.
-  const listItems: HeroListItem[] = [
-    {
-      icon: <Ribbon24Regular />,
-      primaryText: "Achieve more with Office integration",
-    },
-    {
-      icon: <LockOpen24Regular />,
-      primaryText: "Unlock features and functionality",
-    },
-    {
-      icon: <DesignIdeas24Regular />,
-      primaryText: "Create and visualize like a pro",
-    },
-  ];
+  const insertPPT = (orderNum: number) => {
+    officeUtils.applyPPTByIndex(
+      "https://raw.githubusercontent.com/chenchen32/office-addin-demo/main/public/assets/sport.pptx",
+      orderNum - 1
+    );
+  };
 
   return (
-    <div className={styles.root}>
-      <Header logo="assets/logo-filled.png" title={props.title} message="Welcome" />
-      <HeroList message="Discover what this add-in can do for you today!" items={listItems} />
-      <TextInsertion />
+    <div style={{ textAlign: "center" }}>
+      <div className="button-section">
+        <Button type="primary" onClick={insertText}>
+          插入文字
+        </Button>
+      </div>
+      <div className="button-section">
+        <Button type="primary" onClick={insertImage}>
+          插入图片
+        </Button>
+      </div>
+      {[1, 2, 3].map((orderNum) => {
+        return (
+          <div key={orderNum} className="button-section">
+            <Button type="primary" onClick={() => insertPPT(orderNum)}>
+              插入PPT第{orderNum}页
+            </Button>
+          </div>
+        );
+      })}
     </div>
   );
 };

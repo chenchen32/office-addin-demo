@@ -13,12 +13,11 @@ async function getHttpsOptions() {
 }
 
 module.exports = async (env, options) => {
-  const dev = options.mode === "development";
   const config = {
     devtool: "source-map",
     entry: {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
-      vendor: ["react", "react-dom", "core-js", "@fluentui/react-components", "@fluentui/react-icons"],
+      vendor: ["react", "react-dom", "core-js"],
       taskpane: ["./src/taskpane/index.tsx", "./src/taskpane/taskpane.html"],
       commands: "./src/commands/commands.ts",
     },
@@ -68,7 +67,7 @@ module.exports = async (env, options) => {
           },
           {
             from: `./public/manifest/manifest.${buildEnv}.xml`,
-            to: 'manifest.xml',
+            to: "manifest.xml",
           },
         ],
       }),
