@@ -1,10 +1,7 @@
 {
   "name": "office-addin-taskpane-react",
   "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-React.git"
-  },
+  "homepage": "https://chenchen32.github.io/office-addin-demo",
   "license": "MIT",
   "config": {
     "app_to_debug": "powerpoint",
