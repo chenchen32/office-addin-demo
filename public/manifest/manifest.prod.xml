@@ -10,13 +10,13 @@
   <HighResolutionIconUrl DefaultValue="https://cdn.jsdelivr.net/gh/chenchen32/office-addin-demo@main/public/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://cdn.jsdelivr.net/gh/chenchen32/office-addin-demo@main/readme.md"/>
   <AppDomains>
-    <AppDomain>https://cdn.jsdelivr.net</AppDomain>
+    <AppDomain>https://chenchen32.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Presentation"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:10200/taskpane.html"/>
+    <SourceLocation DefaultValue="https://chenchen32.github.io/office-addin-demo/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -68,8 +68,8 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:10200/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:10200/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://chenchen32.github.io/office-addin-demo/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://chenchen32.github.io/office-addin-demo/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
